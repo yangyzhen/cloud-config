@@ -4,6 +4,14 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
 server:
   port: 8786
+
 spring:
   application:
     name: cloud-client
+
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: client-client
+      
